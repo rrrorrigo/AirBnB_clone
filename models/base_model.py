@@ -20,7 +20,7 @@ class BaseModel():
 		else:
 			self.id = str(uuid4())
 			self.created_at = datetime.now()
-			self.updated_at = datetime.now()
+			self.updated_at = self.created_at
 			models.storage.new(self)
 			models.storage.save()
 

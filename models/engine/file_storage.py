@@ -28,6 +28,8 @@ class FileStorage:
 		json_objects = {}
 		for key in self.__objects:
 			json_objects[key] = self.__objects[key].to_dict()
+		with open(self.__file_path, 'w') as f:
+			json.dump(json_objects, f)
 
 	def reload(self):
 		try:
@@ -36,4 +38,4 @@ class FileStorage:
 			for key in js:
 				self.__objects[key] = props[js[key]["__class__"]](**js[key])
 		except Exception as e:
-			pass
+			print(e)
