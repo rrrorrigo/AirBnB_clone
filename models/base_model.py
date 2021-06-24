@@ -10,7 +10,7 @@ timeform = "%Y-%m-%dT%H:%M:%S.%f"
 class BaseModel():
 	def __init__(self, *args, **kwargs):
 		if kwargs:
-			for key, value, in kwargs.tems():
+			for key, value, in kwargs.items():
 				if key != "__class__":
 					setattr(self, key, value)
 			if hasattr(self, "created_at") and type(self.created_at) is str:
