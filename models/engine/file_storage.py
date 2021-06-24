@@ -37,5 +37,5 @@ class FileStorage:
 				js = json.load(f)
 			for key in js:
 				self.__objects[key] = props[js[key]["__class__"]](**js[key])
-		except Exception as e:
-			print(e)
+		except:
+			pass

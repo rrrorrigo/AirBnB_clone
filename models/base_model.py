@@ -15,8 +15,8 @@ class BaseModel():
 					setattr(self, key, value)
 			if hasattr(self, "created_at") and type(self.created_at) is str:
 				self.created_at = datetime.strptime(kwargs["created_at"], timeform)
-			if hasattr(self, "updated_at") and type(self.update_at) is str:
-				self.update_at = datetime.strptime(kwargs["updated_at"], timeform)
+			if hasattr(self, "updated_at") and type(self.updated_at) is str:
+				self.updated_at = datetime.strptime(kwargs["updated_at"], timeform)
 		else:
 			self.id = str(uuid4())
 			self.created_at = datetime.now()
