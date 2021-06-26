@@ -15,6 +15,7 @@ from models import storage
 
 props = {"BaseModel": BaseModel, "User": User, "State": State, "City": City,
          "Amenity": Amenity, "Place": Place, "Review": Review}
+glob = 0
 
 
 class HBNBCommand(cmd.Cmd):
@@ -216,8 +217,13 @@ class HBNBCommand(cmd.Cmd):
         def preloop(self):
                 pass
 
+        def precmd(line):
+                if line == "EOF":
+                        glob = 1
+                return line
+
         def postloop(self):
-                if self.lastcmd not in ["quit", "EOF"]:
+                if self.lastcmd not in ["quit"] or glob == 0:
                         print("")
 
 if __name__ == '__main__':
