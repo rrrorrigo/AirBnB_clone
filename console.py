@@ -223,7 +223,7 @@ class HBNBCommand(cmd.Cmd):
                 return line
 
         def postloop(self):
-                if self.lastcmd not in ["quit"] or glob == 0:
+                if self.lastcmd not in ["quit"] and glob == 0:
                         print("")
 
 if __name__ == '__main__':
