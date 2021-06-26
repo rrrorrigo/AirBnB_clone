@@ -217,7 +217,8 @@ class HBNBCommand(cmd.Cmd):
                 pass
 
         def postloop(self):
-                pass
+                if self.lastcmd not in ["quit", "EOF"]:
+                        print("")
 
 if __name__ == '__main__':
         HBNBCommand().cmdloop()
