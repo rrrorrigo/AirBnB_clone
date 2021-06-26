@@ -1,6 +1,6 @@
 # Project: 0x00. AirBnB Clone.
 
-<img src="https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210625%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210625T233048Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c6815f7a270a1c5f32cf976f007a65351d0da11b3ed768ae91d5e7be60c20c27" alt=""/>
+![hbnb](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210625%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210625T233048Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c6815f7a270a1c5f32cf976f007a65351d0da11b3ed768ae91d5e7be60c20c27)
 
 ### General
 
