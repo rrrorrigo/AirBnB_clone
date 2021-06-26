@@ -15,7 +15,6 @@ from models import storage
 
 props = {"BaseModel": BaseModel, "User": User, "State": State, "City": City,
          "Amenity": Amenity, "Place": Place, "Review": Review}
-glob = 0
 
 
 class HBNBCommand(cmd.Cmd):
@@ -195,7 +194,7 @@ class HBNBCommand(cmd.Cmd):
                         if dict_obj[i].__class__.__name__ == arg_list[0]:
                                 ret += 1
                 print(ret)
-        
+
         def default(self, arg):
                 dot_found = re.search(r"\.", arg)
                 dict_arg = {"all": self.do_all, "create": self.do_create, "destroy": self.do_destroy, "show": self.do_show, "update": self.do_update, "count": self.do_count}
@@ -214,17 +213,8 @@ class HBNBCommand(cmd.Cmd):
                 print("*** Unknwon syntax: {}".format(arg))
                 return False
 
-        def preloop(self):
-                pass
-
-        def precmd(line):
-                if line == "EOF":
-                        glob = 1
-                return line
-
         def postloop(self):
-                if self.lastcmd not in ["quit"] and glob == 0:
-                        print("")
+                pass
 
 if __name__ == '__main__':
         HBNBCommand().cmdloop()
