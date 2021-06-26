@@ -213,6 +213,9 @@ class HBNBCommand(cmd.Cmd):
                 print("*** Unknwon syntax: {}".format(arg))
                 return False
 
+        def preloop(self):
+                pass
+
         def postloop(self):
                 pass
 
