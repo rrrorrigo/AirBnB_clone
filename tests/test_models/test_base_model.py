@@ -12,11 +12,11 @@ class BaseModelTest(unittest.TestCase):
     """la puta que lo aprio"""
 
     @classmethod
-    def test_setealo(self):
+    def setUp(self):
         """la puta que lo aprio"""
         self.ritmobase = BaseModel()
 
-    def test_romeplo(self):
+    def tearDown(self):
         """la puta que lo aprio"""
         if os.path.exists("file.json"):
             os.remove("file.json")
