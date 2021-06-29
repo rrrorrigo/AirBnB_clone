@@ -31,6 +31,11 @@ class testeomodeloclase(unittest.TestCase):
         ritmobase1 = BaseModel([0, 1, 2])
         self.assertNotEqual(ritmobase1.id, [0, 1, 2])
 
+    def cuandosecreopadre(self):
+        ritmobase2 = BaseModel()
+        self.assertEqual(type(ritmobase2.created_at), type(datetime.now()))
+        self.assertTrue(hasattr(ritmobase2, "created_at"))
+
 
 if __name__ == "__main__":
     unittest.main()
