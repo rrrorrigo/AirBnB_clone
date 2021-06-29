@@ -7,34 +7,25 @@ from models.amenity import Amenity
 import models
 from datetime import datetime
 import os
-import inspect
 
 
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
-        @classmethod
-        def setUpClass(cls):
-            """Set up for the doc tests"""
-            cls.amenity_f = inspect.getmembers(Amenity, inspect.isfunction)
-
         def test_Init(self):
-            """test instance"""
-            t = Amenity()
-            self.assertIsInstance(t, Amenity)
+                """test instance"""
+                t = Amenity()
+                self.assertIsInstance(t, Amenity)
 
         def test_unique_id(self):
-            """ test if it generate unique id"""
-            Amenity1 = Amenity()
-            Amenity2 = Amenity()
-            self.assertNotEqual(Amenity1, Amenity2)
+                """ test if it generate unique id"""
+                Amenity1 = Amenity()
+                Amenity2 = Amenity()
+                self.assertNotEqual(Amenity1, Amenity2)
 
         def test_doc(self):
-            """ test if class has docstring"""
-            for f in self.amenity_f:
-                self.assertIsNot(f[1].__doc__, None,
-                                 "{:s} method needs a docstring".format(f[0]))
-                self.assertTrue(len(f[1].__doc__) >= 1,
-                                "{:s} method needs a docstring".format(f[0]))
+                """ test if class has docstring"""
+                self.assertIsNotNone(models.Amenity.__doc__)
+                self.assertIsNotNone(Amenity.__doc__)
 
 if __name__ == "__main__":
     unittest.main()
