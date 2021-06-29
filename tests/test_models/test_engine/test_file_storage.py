@@ -41,7 +41,7 @@ class fileestoraesoepapa(unittest.TestCase):
             print(Storage.__objects)
         self.assertEqual(str(a.exception),
                          "'FileStorage' object has no" +
-                         " attribute '_TestFileStorageClass_objects'")
+                         " attribute '_fileestoraesoepapa__objects'")
 
 if __name__ == "__main__":
     unittest.main()
