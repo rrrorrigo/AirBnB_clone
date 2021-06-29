@@ -8,7 +8,6 @@ import models
 from datetime import datetime
 import os
 import inspect
-Amenity = amenity.Amenity
 
 
 class AmenityTest(unittest.TestCase):
