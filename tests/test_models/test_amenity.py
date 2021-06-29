@@ -32,9 +32,9 @@ class AmenityTest(unittest.TestCase):
             """ test if class has docstring"""
             for f in self.amenity_f:
                 self.assertIsNot(f[1].__doc__, None,
-                                "{:s} method needs a docstring".format(f[0]))
+                                 "{:s} method needs a docstring".format(f[0]))
                 self.assertTrue(len(f[1].__doc__) >= 1,
-                            "{:s} method needs a docstring".format(f[0]))
+                                "{:s} method needs a docstring".format(f[0]))
 
 if __name__ == "__main__":
     unittest.main()
