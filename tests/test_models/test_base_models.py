@@ -10,20 +10,20 @@ from time import sleep
 
 class BaseModelTest(unittest.TestCase):
 
-    def setealo(self):
+    def test_setealo(self):
         self.ritmobase = BaseModel()
 
-    def romeplo(self):
+    def test_romeplo(self):
         if os.path.exists("file.json"):
             os.remove("file.json")
 
-    def crearunainstancia(self):
+    def test_crearunainstancia(self):
         ritmobase = BaseModel()
         self.assertEqual(type(ritmobase.id), str)
         self.assertEqual(type(ritmobase.created_at), datetime)
         self.assertEqual(type(ritmobase.updated_at), datetime)
 
-    def idiferente(self):
+    def test_idiferente(self):
         ritmobase1 = BaseModel(69)
         self.assertNotEqual(ritmobase1.id, 69)
         ritmobase1 = BaseModel("holi")
@@ -31,12 +31,12 @@ class BaseModelTest(unittest.TestCase):
         ritmobase1 = BaseModel([0, 1, 2])
         self.assertNotEqual(ritmobase1.id, [0, 1, 2])
 
-    def cuandosecreopadre(self):
+    def test_cuandosecreopadre(self):
         ritmobase2 = BaseModel()
         self.assertEqual(type(ritmobase2.created_at), type(datetime.now()))
         self.assertTrue(hasattr(ritmobase2, "created_at"))
 
-    def cuandoseupdeteoyeyeee(self):
+    def test_cuandoseupdeteoyeyeee(self):
         ritmobase2 = BaseModel()
         self.assertEqual(type(ritmobase2.updated_at), type(datetime.now()))
         self.assertTrue(hasattr(ritmobase2, "updated_at"))
@@ -45,7 +45,7 @@ class BaseModelTest(unittest.TestCase):
         ritmobase2.save()
         self.assertFalse(actualizado == ritmobase2.updated_at)
 
-    def crearvariasinstancias(self):
+    def test_crearvariasinstancias(self):
         ritmobase = BaseModel()
         self.assertEqual(type(ritmobase.id), str)
         self.assertEqual(type(ritmobase.created_at), datetime)
@@ -59,6 +59,18 @@ class BaseModelTest(unittest.TestCase):
         self.assertEqual(type(ritmobase2.created_at), datetime)
         self.assertEqual(type(ritmobase2.updated_at), datetime)
         self.assertNotEqual(ritmobase.id, ritmobase1.id, ritmobase2.id)
+
+    def test_agregaleatributoskiko(self):
+        ritmobase = BaseModel()
+        ritmobase.name = "Pachu"
+        ritmobase.my_number = 69
+        pictionario = ritmobase.to_dict()
+        self.assertEqual('name' in pictionario, True)
+        self.assertEqual('my_number' in pictionario, True)
+        ritmobase1 = BaseModel()
+        pictionario2 = ritmobase1.to_dict()
+        self.assertEqual('name' in pictionario2, False)
+        self.assertEqual('my_number' in pictionario2, False)
 
 if __name__ == "__main__":
     unittest.main()
