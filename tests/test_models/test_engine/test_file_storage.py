@@ -20,11 +20,11 @@ class fileestoraesoepapa(unittest.TestCase):
 
     @classmethod
     def setUp(self):
-        """la puta que lo aprio"""
+    """la puta que lo aprio"""
         pass
 
     def tearDown(self):
-        """la puta que lo aprio"""
+    """la puta que lo aprio"""
         if os.path.exists("file.json"):
             os.rename("file.json", "eae")
 
@@ -34,6 +34,7 @@ class fileestoraesoepapa(unittest.TestCase):
         self.assertTrue(isinstance(Storage, FileStorage))
     
     def test_privastor(self):
+    """la puta que lo aprio"""
         Storage = FileStorage()
         with self.assertRaises(AttributeError) as a:
             print(Storage.__objects)
@@ -41,5 +42,5 @@ class fileestoraesoepapa(unittest.TestCase):
                          "'FileStorage' object has no" +
                          " attribute '_TestFileStorageClass_objects'")
 
-
-
+if __name__ == "__main__":
+    unittest.main()
