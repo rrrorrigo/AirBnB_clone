@@ -23,6 +23,14 @@ class testeomodeloclase(unittest.TestCase):
         self.assertEqual(type(ritmobase.created_at), datetime)
         self.assertEqual(type(ritmobase.updated_at), datetime)
 
+    def idiferente(self):
+        ritmobase1 = BaseModel(69)
+        self.assertNotEqual(ritmobase1.id, 69)
+        ritmobase1 = BaseModel("holi")
+        self.assertNotEqual(ritmobase1.id, "holi")
+        ritmobase1 = BaseModel([0, 1, 2])
+        self.assertNotEqual(ritmobase1.id, [0, 1, 2])
+
 
 if __name__ == "__main__":
     unittest.main()
