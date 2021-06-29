@@ -72,5 +72,49 @@ class BaseModelTest(unittest.TestCase):
         self.assertEqual('name' in pictionario2, False)
         self.assertEqual('my_number' in pictionario2, False)
 
+    def test_metodostring(self):
+        ritmobase = BaseModel()
+        self.assertEqual(type(str(ritmobase)), str)
+    
+    def test_metstrclasname(self):
+        ritmobase = BaseModel()
+        self.assertEqual('[BaseModel]' in str(ritmobase), True)
+
+    def test_strid(self):
+        ritmobase = BaseModel()
+        self.assertEqual('id' in str(ritmobase), True)
+
+    def test_strcreatedat(self):
+        ritmobase = BaseModel()
+        self.assertEqual('created_at' in str(ritmobase), True)
+
+    def test_strupdatedat(self):
+        ritmobase = BaseModel()
+        self.assertEqual('updated_at' in str(ritmobase), True)
+
+    def test_quetira(self):
+        ritmobase = BaseModel()
+        resultante = "[{}] ({}) {}".format(
+            ritmobase.__class__.__name__,
+            ritmobase.id,
+            ritmobase.__dict__
+        )
+        self.assertEqual(resultante, str(ritmobase))
+    
+    def test_gaurdalopapa(self):
+        ritmobase = BaseModel()
+        tiempopachu = ritmobase.updated_at
+        sleep(10)
+        ritmobase.id = 69
+        ritmobase.save()
+        tiempokiko = ritmobase.updated_at
+        self.assertTrue(hasattr(ritmobase, "id"))
+        self.assertTrue(ritmobase.id == 69)
+        self.assertNotEqual(tiempokiko, tiempopachu)
+        with open("file.json", "r", encoding="utf-8") as f:
+            self.assertTrue("\"id\": 69" in f.read())
+
+    
+
 if __name__ == "__main__":
     unittest.main()
