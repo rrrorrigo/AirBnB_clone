@@ -60,10 +60,5 @@ class TestBaseModelClass(unittest.TestCase):
         self.assertEqual(type(ritmobase2.updated_at), datetime)
         self.assertNotEqual(ritmobase.id, ritmobase1.id, ritmobase2.id)
 
-    def agregaratributos(self):
-        ritmobase = BaseModel()
-        ritmobase.name = "Holberton"
-        ritmobase.
-
 if __name__ == "__main__":
     unittest.main()
