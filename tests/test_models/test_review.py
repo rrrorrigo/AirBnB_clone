@@ -25,3 +25,6 @@ class ReviewTest(unittest.TestCase):
                 """ test if class has docstring"""
                 self.assertIsNotNone(models.review.__doc__)
                 self.assertIsNotNone(Review.__doc__)
+
+if __name__ == "__main__":
+    unittest.main()

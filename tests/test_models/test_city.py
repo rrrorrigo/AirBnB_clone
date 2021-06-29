@@ -26,3 +26,6 @@ class CityTest(unittest.TestCase):
                 """ test if class has docstring"""
                 self.assertIsNotNone(models.city.__doc__)
                 self.assertIsNotNone(City.__doc__)
+
+if __name__ == "__main__":
+    unittest.main()

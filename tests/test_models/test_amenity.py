@@ -26,3 +26,6 @@ class AmenityTest(unittest.TestCase):
                 """ test if class has docstring"""
                 self.assertIsNotNone(models.amenity.__doc__)
                 self.assertIsNotNone(Amenity.__doc__)
+
+if __name__ == "__main__":
+    unittest.main()
