@@ -39,7 +39,7 @@ class fileestoraesoepapa(unittest.TestCase):
         Storage = FileStorage()
         with self.assertRaises(AttributeError) as a:
             print(Storage.__objects)
-        self.assertEqual(str(e.exception),
+        self.assertEqual(str(a.exception),
                          "'FileStorage' object has no" +
                          " attribute '_TestFileStorageClass_objects'")
 
