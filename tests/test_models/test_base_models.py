@@ -8,7 +8,7 @@ import unittest
 import os
 from time import sleep
 
-class testeomodeloclase(unittest.TestCase):
+class TestBaseModelClass(unittest.TestCase):
 
     def setealo(self):
         self.ritmobase = BaseModel()
@@ -36,6 +36,34 @@ class testeomodeloclase(unittest.TestCase):
         self.assertEqual(type(ritmobase2.created_at), type(datetime.now()))
         self.assertTrue(hasattr(ritmobase2, "created_at"))
 
+    def cuandoseupdeteoyeyeee(self):
+        ritmobase2 = BaseModel()
+        self.assertEqual(type(ritmobase2.updated_at), type(datetime.now()))
+        self.assertTrue(hasattr(ritmobase2, "updated_at"))
+        actualizado =  ritmobase2.updated_at
+        self.assertTrue(actualizado == ritmobase2.updated_at)
+        ritmobase2.save()
+        self.assertFalse(actualizado == ritmobase2.updated_at)
+
+    def crearvariasinstancias(self):
+        ritmobase = BaseModel()
+        self.assertEqual(type(ritmobase.id), str)
+        self.assertEqual(type(ritmobase.created_at), datetime)
+        self.assertEqual(type(ritmobase.updated_at), datetime)
+        ritmobase1 = BaseModel()
+        self.assertEqual(type(ritmobase1.id), str)
+        self.assertEqual(type(ritmobase1.created_at), datetime)
+        self.assertEqual(type(ritmobase1.updated_at), datetime)
+        ritmobase2 = BaseModel()
+        self.assertEqual(type(ritmobase2.id), str)
+        self.assertEqual(type(ritmobase2.created_at), datetime)
+        self.assertEqual(type(ritmobase2.updated_at), datetime)
+        self.assertNotEqual(ritmobase.id, ritmobase1.id, ritmobase2.id)
+
+    def agregaratributos(self):
+        ritmobase = BaseModel()
+        ritmobase.name = "Holberton"
+        ritmobase.
 
 if __name__ == "__main__":
     unittest.main()
