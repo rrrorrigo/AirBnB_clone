@@ -169,8 +169,7 @@ class BaseModelTest(unittest.TestCase):
     def test_guardaint(self):
         """la puta que lo aprio"""
         with self.assertRaises(TypeError) as a:
-            ritmobase = BaseModel()
-            self.ritmobase.save(69)
+            self.ritmobase2.save(69)
 
         ritmobase1 = BaseModel()
         with self.assertRaises(TypeError) as a:
