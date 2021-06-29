@@ -161,7 +161,7 @@ class BaseModelTest(unittest.TestCase):
     def test_demasiadosargumentos(self):
         """la puta que lo aprio"""
         with self.assertRaises(TypeError) as a:
-            ritmobase = BaseModel
+            ritmobase = BaseModel()
             ritmobase.save("eae")
         self.assertEqual(str(a.exception), "save() takes 1 positional" +
                                            " argument but 2 were given")
@@ -181,7 +181,7 @@ class BaseModelTest(unittest.TestCase):
     def test_demasiadosargumentospadre(self):
         """la puta que lo aprio"""
         with self.assertRaises(TypeError) as a:
-            ritmobase = BaseModel
+            ritmobase = BaseModel()
             ritmobase.to_dict("eae")
         self.assertEqual(str(a.exception), "to_dict() takes 1 positional" +
                                            " argument but 2 were given")
