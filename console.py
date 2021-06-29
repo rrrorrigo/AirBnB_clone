@@ -198,26 +198,26 @@ class HBNBCommand(cmd.Cmd):
         def default(self, arg):
                 dot_found = re.search(r"\.", arg)
                 dict_arg = {"all": self.do_all,
-						    "create": self.do_create,
-						    "destroy": self.do_destroy,
-							"show": self.do_show,
-							"update": self.do_update,
-							"count": self.do_count}
+                            "create": self.do_create,
+                            "destroy": self.do_destroy,
+                            "show": self.do_show,
+                            "update": self.do_update,
+                            "count": self.do_count}
                 if dot_found:
                         commas = [arg[:dot_found.span()[0]],
 								  arg[dot_found.span()[1]:]]
                         parser = re.search(r"\((.*?)\)", commas[1])
                         if parser:
                                 comando = [commas[1][:parser.span()[0]],
-										   parser.group()[1:-1]]
+                                            parser.group()[1:-1]]
                                 if comando[0] == "update":
                                         rem_com = comando[1].replace(",", "")
                                         call = "{} {}".format(commas[0],
-															  rem_com)
+                                                                rem_com)
                                         return dict_arg[comando[0]](call)
                                 elif comando[0] in dict_arg.keys():
                                         call = "{} {}".format(commas[0],
-															  comando[1])
+                                                                comando[1])
                                         return dict_arg[comando[0]](call)
                 print("*** Unknwon syntax: {}".format(arg))
                 return False
