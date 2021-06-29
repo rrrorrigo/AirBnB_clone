@@ -8,7 +8,7 @@ import unittest
 import os
 from time import sleep
 
-class TestBaseModelClass(unittest.TestCase):
+class BaseModelTest(unittest.TestCase):
 
     def setealo(self):
         self.ritmobase = BaseModel()
