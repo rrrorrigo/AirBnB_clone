@@ -24,5 +24,5 @@ class PlaceTest(unittest.TestCase):
 
         def test_doc(self):
                 """ test if class has docstring"""
-                self.assertIsNotNone(models.place.__doc__)
+                self.assertIsNotNone(models.Place.__doc__)
                 self.assertIsNotNone(Place.__doc__)
