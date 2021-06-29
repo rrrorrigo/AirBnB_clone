@@ -23,7 +23,7 @@ class ReviewTest(unittest.TestCase):
 
         def test_doc(self):
                 """ test if class has docstring"""
-                self.assertIsNotNone(models.Review.__doc__)
+                self.assertIsNotNone(models.review.__doc__)
                 self.assertIsNotNone(Review.__doc__)
 
 if __name__ == "__main__":
