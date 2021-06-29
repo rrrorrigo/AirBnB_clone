@@ -154,13 +154,13 @@ class BaseModelTest(unittest.TestCase):
 
     def test_argumentoteleton(self):
         """la puta que lo aprio"""
-        with self.asserRaises(NameError) as a:
+        with self.assertRaises(NameError) as a:
             ritmobase = BaseModel(ea)
         self.assertEqual(str(a.exception), "name 'ea' is not defined")
 
     def test_demasiadosargumentos(self):
         """la puta que lo aprio"""
-        with self.asserRaises(TypeError) as a:
+        with self.assertRaises(TypeError) as a:
             ritmobase = BaseModel
             ritmobase.save("eae")
         self.assertEqual(str(a.exception), "save() takes 1 positional" +
@@ -168,11 +168,11 @@ class BaseModelTest(unittest.TestCase):
 
     def test_guardaint(self):
         """la puta que lo aprio"""
-        with self.asserRaises(TypeError) as a:
+        with self.assertRaises(TypeError) as a:
             self.ritmobase.save(69)
 
         ritmobase1 = BaseModel()
-        with self.asserRaises(TypeError) as a:
+        with self.assertRaises(TypeError) as a:
             ritmobase1.save(69)
         
         self.assertEqual(str(a.exception), "save() takes 1 positional" +
@@ -180,7 +180,7 @@ class BaseModelTest(unittest.TestCase):
 
     def test_demasiadosargumentospadre(self):
         """la puta que lo aprio"""
-        with self.asserRaises(TypeError) as a:
+        with self.assertRaises(TypeError) as a:
             ritmobase = BaseModel
             ritmobase.to_dict("eae")
         self.assertEqual(str(a.exception), "to_dict() takes 1 positional" +
