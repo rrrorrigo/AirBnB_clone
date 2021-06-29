@@ -43,5 +43,12 @@ class fileestoraesoepapa(unittest.TestCase):
                          "'FileStorage' object has no" +
                          " attribute '_fileestoraesoepapa__objects'")
 
+    def test_atr(self):
+        """la puta que lo aprio"""
+        Storage = FileStorage()
+        Storage.reset()
+        self.assertTrue(hasattr(FileStorage, "_FileStorage__file_path"))
+        self.assertTrue(hasattr(FileStorage, "_FileStorage__objects"))
+
 if __name__ == "__main__":
     unittest.main()
