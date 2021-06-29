@@ -3,10 +3,12 @@
         import modules of class AmenityTest
 """
 import unittest
-from models.amenity import Amenity
+from models.amenity import amenity
 import models
 from datetime import datetime
 import os
+import inspect
+Amenity = amenity.Amenity
 
 
 class AmenityTest(unittest.TestCase):
