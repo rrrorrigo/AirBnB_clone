@@ -46,7 +46,7 @@ class fileestoraesoepapa(unittest.TestCase):
     def test_atr(self):
         """la puta que lo aprio"""
         Storage = FileStorage()
-        Storage.reset()
+        Storage.reload()
         self.assertTrue(hasattr(FileStorage, "_FileStorage__file_path"))
         self.assertTrue(hasattr(FileStorage, "_FileStorage__objects"))
 
