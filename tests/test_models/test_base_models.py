@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """la puta que lo aprio"""
-
 from models.base_model import BaseModel
 import models
 from datetime import datetime
@@ -8,9 +7,11 @@ import unittest
 import os
 from time import sleep
 
+
 class BaseModelTest(unittest.TestCase):
     """la puta que lo aprio"""
 
+     @classmethod
     def test_setealo(self):
         """la puta que lo aprio"""
         self.ritmobase = BaseModel()
