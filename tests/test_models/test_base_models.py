@@ -11,7 +11,7 @@ from time import sleep
 class BaseModelTest(unittest.TestCase):
     """la puta que lo aprio"""
 
-     @classmethod
+    @classmethod
     def test_setealo(self):
         """la puta que lo aprio"""
         self.ritmobase = BaseModel()
