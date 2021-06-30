@@ -33,7 +33,7 @@ class AmenityTest(unittest.TestCase):
 
     def test_doc(self):
         """ test if class has docstring"""
-        self.assertIsNotNone(amenity.Amenity.__doc__)
+        self.assertIsNotNone(Amenity.amenity.__doc__)
         self.assertIsNotNone(Amenity.__doc__)
 
 if __name__ == "__main__":
