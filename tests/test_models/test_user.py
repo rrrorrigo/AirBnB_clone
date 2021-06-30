@@ -30,31 +30,31 @@ class UserTest(unittest.TestCase):
         self.assertTrue(hasattr(user, "created_at"))
         self.assertTrue(hasattr(user, "updated_at"))
 
-    def test_email_attr(self):
+    def test_em(self):
         """ test if it generate unique id"""
         user = User()
         self.assertTrue(hasattr(user, "email"))
         self.assertEqual(user.email, "")
 
-    def test_password_attr(self):
+    def test_pas(self):
         """ test if it generate unique id"""
         user = User()
         self.assertTrue(hasattr(user, "password"))
         self.assertEqual(user.password, "")
 
-    def test_first_name_attr(self):
+    def test_finamat(self):
         """ test if it generate unique id"""
         user = User()
         self.assertTrue(hasattr(user, "first_name"))
         self.assertEqual(user.first_name, "")
 
-    def test_last_name_attr(self):
+    def test_lanaat(self):
         """ test if it generate unique id"""
         user = User()
         self.assertTrue(hasattr(user, "last_name"))
         self.assertEqual(user.last_name, "")
 
-    def test_to_dict_creates_dict(self):
+    def test_creatdict(self):
         """ test if it generate unique id"""
         u = User()
         new_d = u.to_dict()
@@ -63,7 +63,7 @@ class UserTest(unittest.TestCase):
             self.assertTrue(attr in new_d)
             self.assertTrue("__class__" in new_d)
 
-    def test_to_dict_values(self):
+    def test_dictval(self):
         """ test if it generate unique id"""
         t_format = "%Y-%m-%dT%H:%M:%S.%f"
         u = User()
@@ -80,27 +80,27 @@ class UserTest(unittest.TestCase):
         string = "[User] ({}) {}".format(user.id, user.__dict__)
         self.assertEqual(string, str(user))
 
-    def test_unique_id(self):
+    def test_uniid(self):
         """ test if it generate unique id"""
         user1 = User()
         user2 = User()
         self.assertNotEqual(user1, user2)
 
-    def test_user_module_docstring(self):
+    def test_module_docstring(self):
         """asdas asd asd asd"""
         self.assertIsNot(user.__doc__, None,
                          "user.py needs a docstring")
         self.assertTrue(len(user.__doc__) >= 1,
                         "user.py needs a docstring")
 
-    def test_user_class_docstring(self):
+    def test_class_docstring(self):
         """asdas asd asd asd"""
         self.assertIsNot(User.__doc__, None,
                          "User class needs a docstring")
         self.assertTrue(len(User.__doc__) >= 1,
                         "User class needs a docstring")
 
-    def test_user_func_docstrings(self):
+    def test_func_docstrings(self):
         """asdas asd asd asd"""
         for func in self.user_f:
             self.assertIsNot(func[1].__doc__, None,
