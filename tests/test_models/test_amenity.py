@@ -13,9 +13,12 @@ class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
 
         @classmethod
+        def setUp(self):
+            """test instance"""
+            t = Amenity()
+
         def test_Init(self):
                 """test instance"""
-                t = Amenity()
                 self.assertIsInstance(self.t, Amenity)
 
         def test_unique_id(self):
