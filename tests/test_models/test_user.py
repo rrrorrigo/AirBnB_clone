@@ -5,17 +5,18 @@
 import unittest
 from datetime import datetime
 import os
-from models.user import User
+import inspect
+from models import user
 from models.base_model import BaseModel
-
+User = user.User
 
 class UserTest(unittest.TestCase):
     """test cases for class object User"""
 
     @classmethod
-    def setUp(self):
+    def setUp(cls):
         """test instance"""
-        self.t = User()
+        cls.user_f = inspect.getmembers(User, inspect.isfunction)
 
     def tearDown(self):
         """test instance"""
@@ -33,6 +34,7 @@ class UserTest(unittest.TestCase):
 
     def test_doc(self):
         """ test if class has docstring"""
+        self.assertIsNotNone(user.__doc__)
         self.assertIsNotNone(User.__doc__)
 
 if __name__ == "__main__":
