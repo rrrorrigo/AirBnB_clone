@@ -11,7 +11,7 @@ import unittest
 Place = place.Place
 
 
-class TestplaceDocs(unittest.TestCase):
+class TestPlaceDocs(unittest.TestCase):
     """test cases for class object Amenity"""
     @classmethod
     def setUpClass(cls):
@@ -41,7 +41,7 @@ class TestplaceDocs(unittest.TestCase):
                             "{:s} method needs a docstring".format(func[0]))
 
 
-class Testplace(unittest.TestCase):
+class TestPlace(unittest.TestCase):
     """test cases for class object Amenity"""
     def test_is_subclass(self):
         """test cases for class object Amenity"""

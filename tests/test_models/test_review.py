@@ -11,7 +11,7 @@ import unittest
 Review = review.Review
 
 
-class TestCityDocs(unittest.TestCase):
+class TestReviewDocs(unittest.TestCase):
     """test cases for class object Amenity"""
     @classmethod
     def setUpClass(cls):
@@ -41,7 +41,7 @@ class TestCityDocs(unittest.TestCase):
                             "{:s} method needs a docstring".format(func[0]))
 
 
-class TestCity(unittest.TestCase):
+class TestReview(unittest.TestCase):
     """test cases for class object Amenity"""
     def test_is_subclass(self):
         """test cases for class object Amenity"""
