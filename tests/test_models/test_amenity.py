@@ -14,8 +14,8 @@ class AmenityTest(unittest.TestCase):
         @classmethod
         def test_Init(self):
                 """test instance"""
-                self.t = Amenity()
-                self.assertIsInstance(self.t, Amenity)
+                t = Amenity()
+                self.assertIsInstance(t, Amenity, "mensahe de error")
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
