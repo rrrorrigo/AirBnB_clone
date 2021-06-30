@@ -10,6 +10,7 @@ from models import user
 from models.base_model import BaseModel
 User = user.User
 
+
 class UserTest(unittest.TestCase):
     """test cases for class object User"""
 

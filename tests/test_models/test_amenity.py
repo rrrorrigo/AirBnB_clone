@@ -54,6 +54,7 @@ class TestAmenityDocs(unittest.TestCase):
             self.assertTrue(len(func[1].__doc__) >= 1,
                             "{:s} method needs a docstring".format(func[0]))
 
+
 class AmenityTest(unittest.TestCase):
     """la puta que lo aprio"""
     def test_is_subclass(self):

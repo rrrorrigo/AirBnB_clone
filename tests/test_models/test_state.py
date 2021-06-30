@@ -10,7 +10,6 @@ from models.state import State
 from models.base_model import BaseModel
 
 
-
 class StateTest(unittest.TestCase):
     """test cases for class object State"""
 
