@@ -48,7 +48,7 @@ class BaseModelTest(unittest.TestCase):
         ritmobase2 = BaseModel()
         self.assertEqual(type(ritmobase2.updated_at), type(datetime.now()))
         self.assertTrue(hasattr(ritmobase2, "updated_at"))
-        actualizado =  ritmobase2.updated_at
+        actualizado = ritmobase2.updated_at
         self.assertTrue(actualizado == ritmobase2.updated_at)
         ritmobase2.save()
         self.assertFalse(actualizado == ritmobase2.updated_at)
@@ -86,7 +86,7 @@ class BaseModelTest(unittest.TestCase):
         """la puta que lo aprio"""
         ritmobase = BaseModel()
         self.assertEqual(type(str(ritmobase)), str)
-    
+
     def test_metstrclasname(self):
         """la puta que lo aprio"""
         ritmobase = BaseModel()
@@ -116,7 +116,7 @@ class BaseModelTest(unittest.TestCase):
             ritmobase.__dict__
         )
         self.assertEqual(resultante, str(ritmobase))
-    
+
     def test_gaurdalopapa(self):
         """la puta que lo aprio"""
         ritmobase = BaseModel()
@@ -172,7 +172,7 @@ class BaseModelTest(unittest.TestCase):
         ritmobase1 = BaseModel()
         with self.assertRaises(TypeError) as a:
             ritmobase1.save(69)
-        
+
         self.assertEqual(str(a.exception), "save() takes 1 positional" +
                                            " argument but 2 were given")
 
