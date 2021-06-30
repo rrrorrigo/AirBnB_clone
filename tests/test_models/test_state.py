@@ -17,6 +17,10 @@ class StateTest(unittest.TestCase):
         """test instance"""
         self.t = State()
 
+    def tearDown(self):
+        """test instance"""
+        pass
+
     def test_Init(self):
         """test instance"""
         self.assertIsInstance(self.t, State)

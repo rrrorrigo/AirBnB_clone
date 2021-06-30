@@ -17,6 +17,10 @@ class UserTest(unittest.TestCase):
         """test instance"""
         self.t = User()
 
+    def tearDown(self):
+        """test instance"""
+        pass
+
     def test_Init(self):
         """test instance"""
         self.assertIsInstance(self.t, User)

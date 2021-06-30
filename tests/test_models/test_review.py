@@ -16,6 +16,10 @@ class ReviewTest(unittest.TestCase):
         """test instance"""
         self.t = Review()
 
+    def tearDown(self):
+        """test instance"""
+        pass
+
     def test_Init(self):
         """test instance"""
         self.assertIsInstance(self.t, Review)

@@ -17,6 +17,10 @@ class PlaceTest(unittest.TestCase):
         """test instance"""
         self.t = Place()
 
+    def tearDown(self):
+        """test instance"""
+        pass
+
     def test_Init(self):
         """test instance"""
         self.assertIsInstance(self.t, Place)
