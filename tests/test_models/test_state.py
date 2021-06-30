@@ -24,7 +24,7 @@ class StateTest(unittest.TestCase):
 
         def test_doc(self):
                 """ test if class has docstring"""
-                self.assertIsNotNone(models.state.__doc__)
+                self.assertIsNotNone(models.State.__doc__)
                 self.assertIsNotNone(State.__doc__)
 
 if __name__ == "__main__":
