@@ -3,10 +3,11 @@
         import modules of class AmenityTest
 """
 import unittest
-from models.amenity import Amenity
 from datetime import datetime
 import os
-from models.base_model import BaseModel
+import models
+Amenity = models.amenity.Amenity
+BaseModel = models.base_model.BaseModel
 
 class AmenityTest(unittest.TestCase):
     """test cases for class object Amenity"""
