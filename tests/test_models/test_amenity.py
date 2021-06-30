@@ -12,9 +12,9 @@ import os
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
         @classmethod
-        def setUp(cls):
+        def setUp(self):
             """test instance"""
-            t = Amenity()
+            self.t = Amenity()
 
         def test_Init(self):
                 """test instance"""
