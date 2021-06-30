@@ -20,12 +20,13 @@ class AmenityTest(unittest.TestCase):
                 """test instance"""
                 pass
 
-        @classmethod
-        def test_Init(cls, self):
+        def test_Init(self):
                 """test instance"""
-                cls.amenity_f = inspect.getmembers(Amenity, inspect.isfunction)
                 t = Amenity()
                 self.assertIsInstance(t, Amenity)
+                self.assertTrue(hasattr(t, "id"))
+                self.assertTrue(hasattr(t, "created_at"))
+                self.assertTrue(hasattr(t, "updated_at"))
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
