@@ -157,17 +157,18 @@ class HBNBCommand(cmd.Cmd):
                 print("** attribute name missing **")
             elif len(arg_list) == 3:
                 print("** value missing **")
-            elif arg_list[0] == "Place":
-                if arg_list[2] in intlist:
-                    try:
-                        arg_list[3] = int(arg_list[3])
-                    except:
-                        arg_list[3] = 0
-                elif arg_list[2] in floatlist:
-                    try:
-                        arg_list[2] = float(arg_list[3])
-                    except:
-                        arg_list[3] = 0.0
+            else:
+                if arg_list[0] == "Place":
+                    if arg_list[2] in intlist:
+                        try:
+                            arg_list[3] = int(arg_list[3])
+                        except:
+                            arg_list[3] = 0
+                    elif arg_list[2] in floatlist:
+                        try:
+                            arg_list[3] = float(arg_list[3])
+                        except:
+                            arg_list[3] = 0.0
                 setattr(models.storage.all()[clave], arg_list[2], arg_list[3])
                 models.storage.all()[clave].save()
 
