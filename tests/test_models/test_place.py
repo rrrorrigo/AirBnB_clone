@@ -13,10 +13,13 @@ class PlaceTest(unittest.TestCase):
         """test cases for class object Place"""
 
         @classmethod
+        def setUp(self):
+            """test instance"""
+            self.t = Place()
+
         def test_Init(self):
                 """test instance"""
-                t = Place()
-                self.assertIsInstance(t, Place)
+                self.assertIsInstance(self.t, Place)
 
         def test_unique_id(self):
                 """ test if it generate unique id"""

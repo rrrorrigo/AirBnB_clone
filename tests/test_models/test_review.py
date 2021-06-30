@@ -12,10 +12,13 @@ class ReviewTest(unittest.TestCase):
         """test cases for class object Review"""
 
         @classmethod
+        def setUp(self):
+            """test instance"""
+            self.t = Review()
+
         def test_Init(self):
                 """test instance"""
-                t = Review()
-                self.assertIsInstance(t, Review)
+                self.assertIsInstance(self.t, Review)
 
         def test_unique_id(self):
                 """ test if it generate unique id"""

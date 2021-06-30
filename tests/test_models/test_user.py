@@ -13,10 +13,13 @@ class UserTest(unittest.TestCase):
         """test cases for class object User"""
 
         @classmethod
+        def setUp(self):
+            """test instance"""
+            self.t = Review()
+
         def test_Init(self):
                 """test instance"""
-                t = User()
-                self.assertIsInstance(t, User)
+                 self.assertIsInstance(self.t, User)
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
