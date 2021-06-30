@@ -6,8 +6,8 @@ import unittest
 from datetime import datetime
 import os
 import models
-Amenity = models.amenity.Amenity
-BaseModel = models.base_model.BaseModel
+from models.amenity import Amenity
+from models.base_model import BaseModel
 
 
 class AmenityTest(unittest.TestCase):
