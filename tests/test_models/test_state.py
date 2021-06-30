@@ -3,10 +3,11 @@
         import modules of class StateTest
 """
 import unittest
-from models.state import State
 from datetime import datetime
 import os
-from models.base_model import BaseModel
+import models
+State = models.state.State
+BaseModel = models.base_model.BaseModel
 
 
 class StateTest(unittest.TestCase):

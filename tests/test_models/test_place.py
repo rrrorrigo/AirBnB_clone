@@ -3,10 +3,11 @@
         import modules of class PlaceTest
 """
 import unittest
-from models.place import Place
 from datetime import datetime
-from models.base_model import BaseModel
 import os
+import models
+Place = models.place.Place
+BaseModel = models.base_model.BaseModel
 
 
 class PlaceTest(unittest.TestCase):

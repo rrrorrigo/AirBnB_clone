@@ -3,10 +3,11 @@
         import modules of class CityTest
 """
 import unittest
-from models.city import City
 from datetime import datetime
-from models.base_model import BaseModel
 import os
+import models
+City = models.city.City
+BaseModel = models.base_model.BaseModel
 
 
 class CityTest(unittest.TestCase):

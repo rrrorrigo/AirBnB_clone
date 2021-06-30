@@ -3,10 +3,11 @@
         import modules of class UserTest
 """
 import unittest
-from models.user import User
 from datetime import datetime
 import os
-from models.base_model import BaseModel
+import models
+User = models.user.User
+BaseModel = models.base_model.BaseModel
 
 
 class UserTest(unittest.TestCase):
