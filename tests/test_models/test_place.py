@@ -4,14 +4,23 @@
 """
 import unittest
 from models.place import Place
+from models import place
 import models
-from datetime import datetime
-import os
+import inspect
+Place = place.Place
 
 
 class PlaceTest(unittest.TestCase):
         """test cases for class object Place"""
         @classmethod
+        def setUp(cls):
+                """test instance"""
+                cls.place_f = inspect.getmembers(Place, inspect.isfunction)
+
+        def tearDown(self):
+                """test instance"""
+                pass
+
         def test_Init(self):
                 """test instance"""
                 t = Place()

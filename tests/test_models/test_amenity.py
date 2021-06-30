@@ -4,17 +4,21 @@
 """
 import unittest
 from models.amenity import Amenity
+from models import amenity
 import models
-from datetime import datetime
-import os
-
+import inspect
+Amenity = amenity.Amenity
 
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
         @classmethod
         def setUp(cls):
-            """test instance"""
-            t = Amenity()
+                """test instance"""
+                cls.amenity_f = inspect.getmembers(Amenity, inspect.isfunction)
+
+        def tearDown(self):
+                """test instance"""
+                pass
 
         def test_Init(self):
                 """test instance"""

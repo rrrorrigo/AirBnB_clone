@@ -4,14 +4,22 @@
 """
 import unittest
 from models.state import State
-import models
-from datetime import datetime
-import os
+from models import state
+import inspect
+State = state.State
 
 
 class StateTest(unittest.TestCase):
         """test cases for class object State"""
         @classmethod
+        def setUp(cls):
+                """test instance"""
+                cls.state_f = inspect.getmembers(State, inspect.isfunction)
+
+        def tearDown(self):
+                """test instance"""
+                pass
+
         def test_Init(self):
                 """test instance"""
                 t = State()
@@ -25,7 +33,7 @@ class StateTest(unittest.TestCase):
 
         def test_doc(self):
                 """ test if class has docstring"""
-                self.assertIsNotNone(models.state.__doc__)
+                self.assertIsNotNone(state.__doc__)
                 self.assertIsNotNone(State.__doc__)
 
 if __name__ == "__main__":
