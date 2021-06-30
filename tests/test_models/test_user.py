@@ -15,7 +15,7 @@ class UserTest(unittest.TestCase):
         @classmethod
         def setUp(self):
             """test instance"""
-            self.t = Review()
+            self.t = User()
 
         def test_Init(self):
                 """test instance"""

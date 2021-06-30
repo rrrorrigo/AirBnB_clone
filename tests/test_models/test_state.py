@@ -15,7 +15,7 @@ class StateTest(unittest.TestCase):
         @classmethod
         def setUp(self):
             """test instance"""
-            self.t = Review()
+            self.t = State()
 
         def test_Init(self):
                 """test instance"""
