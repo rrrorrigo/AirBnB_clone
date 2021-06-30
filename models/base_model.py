@@ -20,8 +20,7 @@ class BaseModel():
             if (hasattr(self, "created_at") and type(self.created_at) is str):
                     a = datetime.strptime(kwargs["created_at"], timeform)
                     self.created_at = a
-            if (hasattr(self, "updated_at") and
-               type(self.updated_at) is str):
+            if (hasattr(self, "updated_at") and type(self.updated_at) is str):
                     a = datetime.strptime(kwargs["updated_at"], timeform)
                     self.updated_at = a
         else:
