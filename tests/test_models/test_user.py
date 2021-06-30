@@ -5,9 +5,8 @@
 import unittest
 from datetime import datetime
 import os
-import models
-User = models.user.User
-BaseModel = models.base_model.BaseModel
+from models.user import User
+from models.base_model import BaseModel
 
 
 class UserTest(unittest.TestCase):
@@ -24,7 +23,7 @@ class UserTest(unittest.TestCase):
 
     def test_Init(self):
         """test instance"""
-        self.assertIsInstance(self.t, User)
+        self.assertIsInstance(self.t, BaseModel)
 
     def test_unique_id(self):
         """ test if it generate unique id"""
