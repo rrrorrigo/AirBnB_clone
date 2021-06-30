@@ -23,7 +23,7 @@ class UserTest(unittest.TestCase):
 
     def test_Init(self):
         """test instance"""
-        self.assertIsInstance(self.t, User)
+        self.assertIsInstance(self.t, BaseModel)
 
     def test_unique_id(self):
         """ test if it generate unique id"""
