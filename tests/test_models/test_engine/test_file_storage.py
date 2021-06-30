@@ -33,7 +33,7 @@ class fileestoraesoepapa(unittest.TestCase):
         Storage = FileStorage()
         self.assertTrue(type(Storage) == FileStorage)
         self.assertTrue(isinstance(Storage, FileStorage))
-    
+
     def test_privastor(self):
         """la puta que lo aprio"""
         Storage = FileStorage()
