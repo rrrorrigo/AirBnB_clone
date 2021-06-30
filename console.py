@@ -104,32 +104,32 @@ class HBNBCommand(cmd.Cmd):
             print(" class name missing ")
 
     def do_all(self, arg):
-            """Prints all string representation of all instances based
-            or not on the class name
+        """Prints all string representation of all instances based
+        or not on the class name
 
-            Syntax:
-                all [name]
+        Syntax:
+            all [name]
 
-            Example:
-                $ all BaseModel or $ all"""
-            arg_list = shlex.split(arg)
-            lista_obj = []
-            if len(arg_list) == 0:
-                for valor in models.storage.all().values():
-                    lista_obj.append(str(valor))
-                print("[", end="")
-                print(", ".join(lista_obj), end="")
-                print("]")
-            elif arg_list[0] in props:
-                for clave in models.storage.all():
-                    if arg_list[0] in clave:
-                        aux = str(models.storage.all()[clave])
-                        lista_obj.append(aux)
-                print("[", end="")
-                print(", ".join(lista_obj), end="")
-                print("]")
-            else:
-                print("** class doesn't exist **")
+        Example:
+            $ all BaseModel or $ all"""
+        arg_list = shlex.split(arg)
+        lista_obj = []
+        if len(arg_list) == 0:
+            for valor in models.storage.all().values():
+                lista_obj.append(str(valor))
+            print("[", end="")
+            print(", ".join(lista_obj), end="")
+            print("]")
+        elif arg_list[0] in props:
+            for clave in models.storage.all():
+                if arg_list[0] in clave:
+                    aux = str(models.storage.all()[clave])
+                              lista_obj.append(aux)
+            print("[", end="")
+            print(", ".join(lista_obj), end="")
+            print("]")
+        else:
+            print("** class doesn't exist **")
 
     def do_update(self, arg):
         """ Command that update a class.
