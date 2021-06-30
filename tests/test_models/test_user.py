@@ -6,7 +6,7 @@ import unittest
 from datetime import datetime
 import os
 import models
-from models import User
+from models.user import User
 from models.base_model import BaseModel
 
 
