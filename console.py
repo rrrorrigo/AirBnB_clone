@@ -196,6 +196,7 @@ class HBNBCommand(cmd.Cmd):
                 print(ret)
 
         def default(self, arg):
+            """la puta que lo aprio"""
                 dot_found = re.search(r"\.", arg)
                 dict_arg = {"all": self.do_all,
                             "create": self.do_create,
@@ -223,7 +224,8 @@ class HBNBCommand(cmd.Cmd):
                 return False
 
         def postloop(self):
-                pass
+            """la puta que lo aprio"""
+            pass
 
 if __name__ == '__main__':
         HBNBCommand().cmdloop()
