@@ -157,7 +157,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** attribute name missing **")
             elif len(arg_list) == 3:
                 print("** value missing **")
-            elif arg_list[0] is "Place":
+            elif arg_list[0] == "Place":
                 if arg_list[2] in intlist:
                     try:
                         arg_list[3] = int(arg_list[3])
