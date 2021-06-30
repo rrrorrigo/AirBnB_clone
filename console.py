@@ -108,37 +108,37 @@ class HBNBCommand(cmd.Cmd):
             or not on the class name
 
             Syntax:
-                    all [name]
+                all [name]
 
             Example:
-                    $ all BaseModel or $ all"""
+                $ all BaseModel or $ all"""
             arg_list = shlex.split(arg)
             lista_obj = []
             if len(arg_list) == 0:
-                    for valor in models.storage.all().values():
-                            lista_obj.append(str(valor))
-                    print("[", end="")
-                    print(", ".join(lista_obj), end="")
-                    print("]")
+                for valor in models.storage.all().values():
+                    lista_obj.append(str(valor))
+                print("[", end="")
+                print(", ".join(lista_obj), end="")
+                print("]")
             elif arg_list[0] in props:
-                    for clave in models.storage.all():
-                            if arg_list[0] in clave:
-                                    aux = str(models.storage.all()[clave])
-                                    lista_obj.append(aux)
-                    print("[", end="")
-                    print(", ".join(lista_obj), end="")
-                    print("]")
+                for clave in models.storage.all():
+                    if arg_list[0] in clave:
+                        aux = str(models.storage.all()[clave])
+                        lista_obj.append(aux)
+                print("[", end="")
+                print(", ".join(lista_obj), end="")
+                print("]")
             else:
-                    print("** class doesn't exist **")
+                print("** class doesn't exist **")
 
     def do_update(self, arg):
         """ Command that update a class.
 
         Syntax:
-                update <class name> <id> <at name> "<at value>
+            update <class name> <id> <at name> "<at value>
 
         Ex.:
-                $ update User 1234-1234-1234 email "aibnb@hbtn.com
+            $ update User 1234-1234-1234 email "aibnb@hbtn.com
         """
         arg_list = shlex.split(arg)
         intlist = ("number_rooms", "number_bathrooms", "max_guest",
@@ -151,7 +151,7 @@ class HBNBCommand(cmd.Cmd):
         elif len(arg_list) == 1:
             print(" instance id missing ")
         else:
-            clave = clave = arg_list[0] + "." + arg_list[1]
+            clave = arg_list[0] + "." + arg_list[1]
             if clave not in models.storage.all():
                 print(" no instance found ")
             elif len(arg_list) == 2:
@@ -178,22 +178,22 @@ class HBNBCommand(cmd.Cmd):
         each class
 
         Syntax:
-                count <class name>
+            count <class name>
 
         Example:
-                $ count User"""
+            $ count User"""
         if arg == "":
-                print("** class name missing **")
-                return
+            print("** class name missing **")
+            return
         arg_list = shlex.split(arg)
         if arg_list[0] not in props:
-                print("** class doesn't exist **")
-                return
+            print("** class doesn't exist **")
+            return
         dict_obj = storage.all()
         ret = 0
         for i, valor in dict_obj.items():
-                if dict_obj[i].__class__.__name__ == arg_list[0]:
-                        ret += 1
+            if dict_obj[i].__class__.__name__ == arg_list[0]:
+                ret += 1
         print(ret)
 
     def default(self, arg):
@@ -222,7 +222,7 @@ class HBNBCommand(cmd.Cmd):
         return False
 
     def postloop(self):
-            pass
+        pass
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
