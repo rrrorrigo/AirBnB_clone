@@ -57,12 +57,6 @@ class Testplace(unittest.TestCase):
         self.assertTrue(hasattr(place, "name"))
         self.assertEqual(place.name, "")
 
-    def test_st(self):
-        """test cases for class object Amenity"""
-        place = Place()
-        self.assertTrue(hasattr(place, "state_id"))
-        self.assertEqual(place.state_id, "")
-
     def test_to_dic(self):
         """test cases for class object Amenity"""
         c = Place()
