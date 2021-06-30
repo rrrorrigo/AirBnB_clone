@@ -4,6 +4,7 @@
 """
 import unittest
 from models.amenity import Amenity
+from models.base_model import BaseModel
 import models
 from datetime import datetime
 import os
@@ -13,11 +14,13 @@ import inspect
 
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
-        @classmethod
-        def test_Init(self):
-                """test instance"""
-                t = Amenity()
-                self.assertIsInstance(t, Amenity)
+        def test_is_subclass(self):
+            """Test that Amenity is a subclass of BaseModel"""
+            amenity = Amenity()
+            self.assertIsInstance(amenity, BaseModel)
+            self.assertTrue(hasattr(amenity, "id"))
+            self.assertTrue(hasattr(amenity, "created_at"))
+            self.assertTrue(hasattr(amenity, "updated_at"))
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
