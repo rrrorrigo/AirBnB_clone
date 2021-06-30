@@ -51,7 +51,6 @@ class TestReview(unittest.TestCase):
         self.assertTrue(hasattr(review, "created_at"))
         self.assertTrue(hasattr(review, "updated_at"))
 
-
     def test_pl(self):
         """test cases for class object Amenity"""
         review = Review()
