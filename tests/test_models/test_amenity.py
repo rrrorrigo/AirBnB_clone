@@ -20,8 +20,10 @@ class AmenityTest(unittest.TestCase):
                 """test instance"""
                 pass
 
-        def test_Init(self):
+        @classmethod
+        def test_Init(cls, self):
                 """test instance"""
+                cls.amenity_f = inspect.getmembers(Amenity, inspect.isfunction)
                 t = Amenity()
                 self.assertIsInstance(t, Amenity)
 
