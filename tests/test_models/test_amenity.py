@@ -8,7 +8,6 @@ from datetime import datetime
 import os
 from models.base_model import BaseModel
 
-
 class AmenityTest(unittest.TestCase):
     """test cases for class object Amenity"""
 
@@ -33,7 +32,7 @@ class AmenityTest(unittest.TestCase):
 
     def test_doc(self):
         """ test if class has docstring"""
-        self.assertIsNotNone(Amenity.amenity.__doc__)
+        self.assertIsNotNone(models.amenity.__doc__)
         self.assertIsNotNone(Amenity.__doc__)
 
 if __name__ == "__main__":
