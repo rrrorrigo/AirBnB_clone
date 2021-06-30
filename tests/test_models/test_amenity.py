@@ -9,6 +9,7 @@ import models
 Amenity = models.amenity.Amenity
 BaseModel = models.base_model.BaseModel
 
+
 class AmenityTest(unittest.TestCase):
     """test cases for class object Amenity"""
 
