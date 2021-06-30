@@ -22,7 +22,12 @@ class AmenityTest(unittest.TestCase):
 
         def test_Init(self):
                 """test instance"""
-                self.assertIsInstance(self.t, Amenity)
+                t = Amenity()
+                self.assertIsInstance(t, Amenity)
+                self.assertTrue(hasattr(t, "id"))
+                self.assertTrue(hasattr(t, "created_at"))
+                self.assertTrue(hasattr(t, "updated_at"))
+
         def test_unique_id(self):
                 """ test if it generate unique id"""
                 Amenity1 = Amenity()
