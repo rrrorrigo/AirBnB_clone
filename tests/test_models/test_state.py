@@ -4,7 +4,6 @@
 """
 import unittest
 from models.state import State
-import models
 from datetime import datetime
 import os
 from models.base_model import BaseModel

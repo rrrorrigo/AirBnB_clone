@@ -3,8 +3,6 @@
         import modules of class AmenityTest
 """
 import unittest
-from models.amenity import Amenity
-import models
 from datetime import datetime
 import os
 from models.base_model import BaseModel
