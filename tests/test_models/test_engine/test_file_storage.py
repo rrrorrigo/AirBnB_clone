@@ -18,7 +18,6 @@ import os
 from datetime import datetime
 
 
-
 class Test_pep8(unittest.TestCase):
     """pep8 test cases class"""
     def test_pep8_conformance(self):
@@ -63,7 +62,7 @@ class fileestoraesoepapa(unittest.TestCase):
         Storage.reload()
         self.assertTrue(hasattr(FileStorage, "_FileStorage__file_path"))
         self.assertTrue(hasattr(FileStorage, "_FileStorage__objects"))
-    
+
     def test_FileStorage_arg(self):
         """testing file storage with an argument"""
         with self.assertRaises(TypeError):
@@ -102,7 +101,7 @@ class fileestoraesoepapa(unittest.TestCase):
         self.assertEqual(str(type(FileStorage)), "<class 'type'>")
         self.assertTrue(isinstance(my_model, FileStorage))
         self.assertTrue(type(my_model), object)
-    
+
     def test_reload(self):
         """tests the reload"""
         if not path.exists("file.json"):
@@ -172,17 +171,17 @@ class fileestoraesoepapa(unittest.TestCase):
         key = new_base.__class__.__name__ + "." + new_base.__dict__["id"]
         key_2 = new_city.__class__.__name__ + "." + new_city.__dict__["id"]
         key_user = new_user.__class__.__name__ + "." + new_user.__dict__["id"]
-        key_review = new_review.__class__.__name__ + "." + new_review.__dict__["id"]
-        key_place = new_place.__class__.__name__ + "." + new_place.__dict__["id"]
-        key_state = new_state.__class__.__name__ + "." + new_state.__dict__["id"]
-        key_amenity = new_amenity.__class__.__name__ + "." + new_amenity.__dict__["id"]
+        kr = new_review.__class__.__name__ + "." + new_review.__dict__["id"]
+        kp = new_place.__class__.__name__ + "." + new_place.__dict__["id"]
+        ks = new_state.__class__.__name__ + "." + new_state.__dict__["id"]
+        ka = new_amenity.__class__.__name__ + "." + new_amenity.__dict__["id"]
         self.assertIn(key, objs)
         self.assertIn(key_2, objs)
         self.assertIn(key_user, objs)
-        self.assertIn(key_review, objs)
-        self.assertIn(key_place, objs)
-        self.assertIn(key_state, objs)
-        self.assertIn(key_amenity, objs)
+        self.assertIn(kr, objs)
+        self.assertIn(kp, objs)
+        self.assertIn(ks, objs)
+        self.assertIn(ka, objs)
 
 if __name__ == "__main__":
     unittest.main()
