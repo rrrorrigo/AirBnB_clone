@@ -18,8 +18,8 @@ class CityTest(unittest.TestCase):
             self.t = City()
 
         def test_Init(self):
-                """test instance"""
-                  self.assertIsInstance(self.t, City)
+            """test instance"""
+            self.assertIsInstance(self.t, City)
 
         def test_unique_id(self):
                 """ test if it generate unique id"""

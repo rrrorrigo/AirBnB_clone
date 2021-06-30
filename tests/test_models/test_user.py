@@ -18,8 +18,8 @@ class UserTest(unittest.TestCase):
             self.t = User()
 
         def test_Init(self):
-                """test instance"""
-                 self.assertIsInstance(self.t, User)
+            """test instance"""
+            self.assertIsInstance(self.t, User)
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
