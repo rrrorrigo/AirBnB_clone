@@ -24,6 +24,9 @@ class StateTest(unittest.TestCase):
                 """test instance"""
                 t = State()
                 self.assertIsInstance(t, State)
+                self.assertTrue(hasattr(t, "id"))
+                self.assertTrue(hasattr(t, "created_at"))
+                self.assertTrue(hasattr(t, "updated_at"))
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
