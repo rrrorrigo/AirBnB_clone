@@ -33,7 +33,6 @@ class UserTest(unittest.TestCase):
 
     def test_doc(self):
         """ test if class has docstring"""
-        self.assertIsNotNone(models.user.__doc__)
         self.assertIsNotNone(User.__doc__)
 
 if __name__ == "__main__":
