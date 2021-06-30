@@ -11,6 +11,7 @@ import os
 
 class StateTest(unittest.TestCase):
         """test cases for class object State"""
+        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = State()

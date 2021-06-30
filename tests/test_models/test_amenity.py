@@ -11,6 +11,7 @@ import os
 
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
+        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = Amenity()
