@@ -10,6 +10,8 @@ import os
 
 class ReviewTest(unittest.TestCase):
         """test cases for class object Review"""
+
+        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = Review()

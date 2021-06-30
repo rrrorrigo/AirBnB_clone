@@ -11,6 +11,8 @@ import os
 
 class PlaceTest(unittest.TestCase):
         """test cases for class object Place"""
+
+        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = Place()

@@ -11,6 +11,8 @@ import os
 
 class CityTest(unittest.TestCase):
         """test cases for class object City"""
+
+        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = City()

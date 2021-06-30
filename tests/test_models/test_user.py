@@ -11,6 +11,8 @@ import os
 
 class UserTest(unittest.TestCase):
         """test cases for class object User"""
+
+        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = User()
