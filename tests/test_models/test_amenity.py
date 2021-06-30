@@ -77,12 +77,6 @@ class TestAmenity(unittest.TestCase):
         self.assertEqual(new_d["created_at"], c.created_at.strftime(t_format))
         self.assertEqual(new_d["updated_at"], c.updated_at.strftime(t_format))
 
-    def test_st(self):
-        """test cases for class object Amenity"""
-        amenity = Amenity()
-        self.assertTrue(hasattr(amenity, "amenity_id"))
-        self.assertEqual(amenity.amenity_id, "")
-
     def test_str(self):
         """test cases for class object Amenity"""
         amenity = Amenity()
