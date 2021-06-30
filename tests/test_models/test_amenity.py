@@ -15,7 +15,7 @@ class AmenityTest(unittest.TestCase):
         @classmethod
         def setUp(self):
             """test instance"""
-            t = Amenity()
+            self.t = Amenity()
 
         def test_Init(self):
                 """test instance"""
