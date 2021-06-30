@@ -141,7 +141,7 @@ class HBNBCommand(cmd.Cmd):
         """
         arg_list = shlex.split(arg)
         intlist = ("number_rooms", "number_bathrooms", "max_guest",
-                    "price_by_night")
+                   "price_by_night")
         floatlist = ("latitude", "longitude")
         if len(arg_list) == 0:
             print("** class name missing **")
