@@ -11,7 +11,6 @@ timeform = "%Y-%m-%dT%H:%M:%S.%f"
 class BaseModel():
     """ Class BaseModel that defines all common
     attributes/methods for other classes"""
-    @classmethod
     def __init__(self, *args, **kwargs):
         """ Initialization of class base model"""
         if kwargs:
