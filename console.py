@@ -169,9 +169,9 @@ class HBNBCommand(cmd.Cmd):
                         arg_list[3] = float(arg_list[3])
                     except:
                         arg_list[3] = 0.0
-                setattr(models.storage.all()[clave],
-                        arg_list[2], arg_list[3])
-                models.storage.all()[clave].save()
+            setattr(models.storage.all()[clave],
+                    arg_list[2], arg_list[3])
+            models.storage.all()[clave].save()
 
     def do_count(self, arg):
         """ Command that count the number of intances of
