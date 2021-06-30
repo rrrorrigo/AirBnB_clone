@@ -12,7 +12,7 @@ Place = place.Place
 
 class PlaceTest(unittest.TestCase):
         """test cases for class object Place"""
-
+        @classmethod
         def setUp(cls):
                 """test instance"""
                 cls.place_f = inspect.getmembers(Place, inspect.isfunction)
@@ -21,7 +21,6 @@ class PlaceTest(unittest.TestCase):
                 """test instance"""
                 pass
 
-        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = Place()
