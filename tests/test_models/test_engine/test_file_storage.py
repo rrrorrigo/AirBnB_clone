@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 """la puta que lo aprio"""
+import json
 from models.engine.file_storage import FileStorage
 import models
 import unittest
+from models import storage
 from models.base_model import BaseModel
 from models.city import City
 from models.user import User
