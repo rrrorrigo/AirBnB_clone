@@ -47,12 +47,14 @@ class HBNBCommand(cmd.Cmd):
         arg_list = shlex.split(arg)
         if len(arg_list) == 0:
             print("** class name missing **")
+            return False
         if arg_list[0] in props:
             instancia = props[arg_list[0]]()
-            print(instancia.id)
-            instancia.save()
         else:
             print("** class doesn't exist **")
+            return False
+        print(instancia.id)
+        instancia.save()
 
     def do_show(self, arg):
             """ Prints the string representation of an instance
