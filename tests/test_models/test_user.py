@@ -6,8 +6,8 @@ import unittest
 from datetime import datetime
 import os
 import models
-from models.user import User
-from models.base_model import BaseModel
+User = models.user.User
+BaseModel = models.base_model.BaseModel
 
 
 class UserTest(unittest.TestCase):
