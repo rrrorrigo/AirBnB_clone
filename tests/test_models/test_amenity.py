@@ -11,12 +11,11 @@ import os
 
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
-        @classmethod
         def test_Init(self):
                 """test instance"""
                 t = Amenity()
-                self.assertIsInstance(t, models.amenity)
-
+                self.assertIsInstance(t, Amenity)
+        @classmethod
         def test_unique_id(self):
                 """ test if it generate unique id"""
                 Amenity1 = Amenity()
