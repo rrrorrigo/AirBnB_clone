@@ -1,48 +1,47 @@
 #!/usr/bin/python3
 """
-Contains the TestCityDocs classes
+Contains the TestStateDocs classes
 """
 
 from datetime import datetime
 import inspect
 from models import state
 from models.base_model import BaseModel
-import pep8
 import unittest
 State = state.State
 
 
-class TestCityDocs(unittest.TestCase):
+class TestStateDocs(unittest.TestCase):
     """test cases for class object Amenity"""
     @classmethod
     def setUpClass(cls):
         """test cases for class object Amenity"""
-        cls.city_f = inspect.getmembers(State, inspect.isfunction)
+        cls.state_f = inspect.getmembers(State, inspect.isfunction)
 
-    def test_city_module(self):
+    def test_state_module(self):
         """test cases for class object Amenity"""
         self.assertIsNot(state.__doc__, None,
                          "state.py needs a docstring")
         self.assertTrue(len(state.__doc__) >= 1,
                         "state.py needs a docstring")
 
-    def test_city_class(self):
+    def test_state_class(self):
         """test cases for class object Amenity"""
         self.assertIsNot(State.__doc__, None,
                          "State class needs a docstring")
         self.assertTrue(len(State.__doc__) >= 1,
                         "State class needs a docstring")
 
-    def test_city_func(self):
+    def test_state_func(self):
         """test cases for class object Amenity"""
-        for func in self.city_f:
+        for func in self.state_f:
             self.assertIsNot(func[1].__doc__, None,
                              "{:s} method needs a docstring".format(func[0]))
             self.assertTrue(len(func[1].__doc__) >= 1,
                             "{:s} method needs a docstring".format(func[0]))
 
 
-class TestCity(unittest.TestCase):
+class TestState(unittest.TestCase):
     """test cases for class object Amenity"""
     def test_is_subclass(self):
         """test cases for class object Amenity"""

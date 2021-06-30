@@ -1,48 +1,47 @@
 #!/usr/bin/python3
 """
-Contains the TestCityDocs classes
+Contains the TestplaceDocs classes
 """
 
 from datetime import datetime
 import inspect
 from models import place
 from models.base_model import BaseModel
-import pep8
 import unittest
 Place = place.Place
 
 
-class TestCityDocs(unittest.TestCase):
+class TestplaceDocs(unittest.TestCase):
     """test cases for class object Amenity"""
     @classmethod
     def setUpClass(cls):
         """test cases for class object Amenity"""
-        cls.city_f = inspect.getmembers(Place, inspect.isfunction)
+        cls.place_f = inspect.getmembers(Place, inspect.isfunction)
 
-    def test_city_module(self):
+    def test_place_module(self):
         """test cases for class object Amenity"""
         self.assertIsNot(place.__doc__, None,
                          "place.py needs a docstring")
         self.assertTrue(len(place.__doc__) >= 1,
                         "place.py needs a docstring")
 
-    def test_city_class(self):
+    def test_place_class(self):
         """test cases for class object Amenity"""
         self.assertIsNot(Place.__doc__, None,
                          "Place class needs a docstring")
         self.assertTrue(len(Place.__doc__) >= 1,
                         "Place class needs a docstring")
 
-    def test_city_func(self):
+    def test_place_func(self):
         """test cases for class object Amenity"""
-        for func in self.city_f:
+        for func in self.place_f:
             self.assertIsNot(func[1].__doc__, None,
                              "{:s} method needs a docstring".format(func[0]))
             self.assertTrue(len(func[1].__doc__) >= 1,
                             "{:s} method needs a docstring".format(func[0]))
 
 
-class TestCity(unittest.TestCase):
+class Testplace(unittest.TestCase):
     """test cases for class object Amenity"""
     def test_is_subclass(self):
         """test cases for class object Amenity"""
@@ -57,6 +56,12 @@ class TestCity(unittest.TestCase):
         place = Place()
         self.assertTrue(hasattr(place, "name"))
         self.assertEqual(place.name, "")
+
+    def test_st(self):
+        """test cases for class object Amenity"""
+        place = Place()
+        self.assertTrue(hasattr(place, "state_id"))
+        self.assertEqual(place.state_id, "")
 
     def test_to_dic(self):
         """test cases for class object Amenity"""

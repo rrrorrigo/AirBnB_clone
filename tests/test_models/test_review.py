@@ -7,7 +7,6 @@ from datetime import datetime
 import inspect
 from models import review
 from models.base_model import BaseModel
-import pep8
 import unittest
 Review = review.Review
 
@@ -60,6 +59,12 @@ class TestCity(unittest.TestCase):
         for attr in c.__dict__:
             self.assertTrue(attr in new_d)
             self.assertTrue("__class__" in new_d)
+
+    def test_st(self):
+        """test cases for class object Amenity"""
+        review = Review()
+        self.assertTrue(hasattr(review, "state_id"))
+        self.assertEqual(review.state_id, "")
 
     def test_to_dict(self):
         """test cases for class object Amenity"""

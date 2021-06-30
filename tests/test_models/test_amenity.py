@@ -7,12 +7,11 @@ from datetime import datetime
 import inspect
 from models import amenity
 from models.base_model import BaseModel
-import pep8
 import unittest
 Amenity = amenity.Amenity
 
 
-class TestCityDocs(unittest.TestCase):
+class TestAmenityDocs(unittest.TestCase):
     """test cases for class object Amenity"""
     @classmethod
     def setUpClass(cls):
@@ -42,7 +41,7 @@ class TestCityDocs(unittest.TestCase):
                             "{:s} method needs a docstring".format(func[0]))
 
 
-class TestCity(unittest.TestCase):
+class TestAmenity(unittest.TestCase):
     """test cases for class object Amenity"""
     def test_is_subclass(self):
         """test cases for class object Amenity"""
@@ -77,6 +76,12 @@ class TestCity(unittest.TestCase):
         self.assertEqual(type(new_d["updated_at"]), str)
         self.assertEqual(new_d["created_at"], c.created_at.strftime(t_format))
         self.assertEqual(new_d["updated_at"], c.updated_at.strftime(t_format))
+
+    def test_st(self):
+        """test cases for class object Amenity"""
+        amenity = Amenity()
+        self.assertTrue(hasattr(amenity, "amenity_id"))
+        self.assertEqual(amenity.amenity_id, "")
 
     def test_str(self):
         """test cases for class object Amenity"""
