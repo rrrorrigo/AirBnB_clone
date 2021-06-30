@@ -4,29 +4,49 @@
 """
 import unittest
 from models.amenity import Amenity
-from models import amenity
 import models
+from datetime import datetime
+import os
+import pep8
 import inspect
-Amenity = amenity.Amenity
+
+
+class TestAmenityDocs(unittest.TestCase):
+    """test cases for class object Amenity"""
+    @classmethod
+    def setUpClass(cls):
+        """test cases for class object Amenity"""
+        cls.amenity_f = inspect.getmembers(Amenity, inspect.isfunction)
+
+    def test_amenity_module_docstring(self):
+        """test cases for class object Amenity"""
+        self.assertIsNot(Amenity.__doc__, None,
+                         "amenity.py needs a docstring")
+        self.assertTrue(len(Amenity.__doc__) >= 1,
+                        "amenity.py needs a docstring")
+
+    def test_amenity_class_docstring(self):
+        """test cases for class object Amenity"""
+        self.assertIsNot(Amenity.__doc__, None,
+                         "Amenity class needs a docstring")
+        self.assertTrue(len(Amenity.__doc__) >= 1,
+                        "Amenity class needs a docstring")
+
+    def test_amenity_func_docstrings(self):
+        """test cases for class object Amenity"""
+        for func in self.amenity_f:
+            self.assertIsNot(func[1].__doc__, None,
+                             "{:s} method needs a docstring".format(func[0]))
+            self.assertTrue(len(func[1].__doc__) >= 1,
+                            "{:s} method needs a docstring".format(func[0]))
+
 
 class AmenityTest(unittest.TestCase):
         """test cases for class object Amenity"""
-        @classmethod
-        def setUp(cls):
-                """test instance"""
-                cls.amenity_f = inspect.getmembers(Amenity, inspect.isfunction)
-
-        def tearDown(self):
-                """test instance"""
-                pass
-
         def test_Init(self):
                 """test instance"""
                 t = Amenity()
                 self.assertIsInstance(t, Amenity)
-                self.assertTrue(hasattr(t, "id"))
-                self.assertTrue(hasattr(t, "created_at"))
-                self.assertTrue(hasattr(t, "updated_at"))
 
         def test_unique_id(self):
                 """ test if it generate unique id"""
