@@ -14,12 +14,12 @@ class CityTest(unittest.TestCase):
 
     @classmethod
     def setUp(self):
-    """test instance"""
-    self.t = City()
+        """test instance"""
+        self.t = City()
 
     def test_Init(self):
-    """test instance"""
-    self.assertIsInstance(self.t, City)
+        """test instance"""
+        self.assertIsInstance(self.t, City)
 
     def test_unique_id(self):
         """ test if it generate unique id"""
