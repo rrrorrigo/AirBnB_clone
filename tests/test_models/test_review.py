@@ -3,9 +3,9 @@
         import modules of class ReviewTest
 """
 import unittest
-from models.review import Review
 import models
 import os
+from models.review import Review
 from models.base_model import BaseModel
 
 

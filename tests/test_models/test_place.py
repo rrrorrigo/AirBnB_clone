@@ -6,8 +6,8 @@ import unittest
 from datetime import datetime
 import os
 import models
-Place = models.place.Place
-BaseModel = models.base_model.BaseModel
+from models.place import Place
+from models.base_model import BaseModel
 
 
 class PlaceTest(unittest.TestCase):
