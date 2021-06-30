@@ -18,6 +18,10 @@ class CityTest(unittest.TestCase):
         """test instance"""
         self.t = City()
 
+    def tearDown(self):
+        """test instance"""
+        pass
+
     def test_Init(self):
         """test instance"""
         self.assertIsInstance(self.t, BaseModel)
