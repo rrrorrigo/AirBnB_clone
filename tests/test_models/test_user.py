@@ -7,6 +7,7 @@ from models.user import User
 import models
 from datetime import datetime
 import os
+from models.base_model import BaseModel
 
 
 class UserTest(unittest.TestCase):

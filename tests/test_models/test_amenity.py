@@ -7,6 +7,7 @@ from models.amenity import Amenity
 import models
 from datetime import datetime
 import os
+from models.base_model import BaseModel
 
 
 class AmenityTest(unittest.TestCase):

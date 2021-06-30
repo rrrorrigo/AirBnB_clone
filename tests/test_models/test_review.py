@@ -6,6 +6,7 @@ import unittest
 from models.review import Review
 import models
 import os
+from models.base_model import BaseModel
 
 
 class ReviewTest(unittest.TestCase):
