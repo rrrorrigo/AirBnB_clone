@@ -52,12 +52,6 @@ class TestCity(unittest.TestCase):
         self.assertTrue(hasattr(review, "created_at"))
         self.assertTrue(hasattr(review, "updated_at"))
 
-    def test_nam(self):
-        """test cases for class object Amenity"""
-        review = Review()
-        self.assertTrue(hasattr(review, "name"))
-        self.assertEqual(review.name, "")
-
     def test_to_dic(self):
         """test cases for class object Amenity"""
         c = Review()
