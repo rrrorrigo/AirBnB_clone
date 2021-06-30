@@ -3,8 +3,6 @@
         import modules of class UserTest
 """
 import unittest
-from datetime import datetime
-import os
 import inspect
 from models import user
 from models.base_model import BaseModel

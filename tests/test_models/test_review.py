@@ -4,13 +4,22 @@
 """
 import unittest
 from models.review import Review
-import models
-import os
+from models import review
+import inspect
+Review = review.Review
 
 
 class ReviewTest(unittest.TestCase):
         """test cases for class object Review"""
         @classmethod
+        def setUp(cls):
+                """test instance"""
+                cls.review_f = inspect.getmembers(Review, inspect.isfunction)
+
+        def tearDown(self):
+                """test instance"""
+                pass
+
         def test_Init(self):
                 """test instance"""
                 t = Review()
@@ -24,7 +33,7 @@ class ReviewTest(unittest.TestCase):
 
         def test_doc(self):
                 """ test if class has docstring"""
-                self.assertIsNotNone(models.review.__doc__)
+                self.assertIsNotNone(review.__doc__)
                 self.assertIsNotNone(Review.__doc__)
 
 if __name__ == "__main__":

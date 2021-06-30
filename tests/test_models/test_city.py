@@ -4,14 +4,23 @@
 """
 import unittest
 from models.city import City
+from models import city
 import models
-from datetime import datetime
-import os
+import inspect
+City = city.City
 
 
 class CityTest(unittest.TestCase):
         """test cases for class object City"""
         @classmethod
+        def setUp(cls):
+                """test instance"""
+                cls.city_f = inspect.getmembers(City, inspect.isfunction)
+
+        def tearDown(self):
+                """test instance"""
+                pass
+
         def test_Init(self):
                 """test instance"""
                 t = City()
