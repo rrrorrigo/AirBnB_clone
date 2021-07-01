@@ -27,6 +27,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, arg):
         """ exit of command interpreter"""
+        print("")
         return True
 
     def emptyline(self):
@@ -100,7 +101,7 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** instance id missing **")
         else:
-            print("** class name missing **")
+            print("** class doesn't exist **")
 
     def do_all(self, arg):
         """Prints all string representation of all instances based
@@ -150,7 +151,7 @@ class HBNBCommand(cmd.Cmd):
         elif len(arg_list) == 1:
             print("** instance id missing **")
         else:
-            clave = clave = arg_list[0] + "." + arg_list[1]
+            clave = arg_list[0] + "." + arg_list[1]
             if clave not in models.storage.all():
                 print("** no instance found **")
             elif len(arg_list) == 2:
