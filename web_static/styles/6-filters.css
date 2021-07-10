@@ -54,7 +54,7 @@ h4 {
 
 .popover {
         list-style: none;
-        visibility: visible;
+        visibility: hidden;
         background-color: #fafafa;
         width: 210px;
         border: #DDDDDD 1px;
